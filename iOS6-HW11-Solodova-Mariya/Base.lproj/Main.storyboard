@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +11,196 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iOS6_HW11_Solodova_Mariya" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kuv-Wp-Rwk" userLabel="imageAndProfileInfoStack">
+                                <rect key="frame" x="12" y="50" width="366" height="96"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pug-dog-isolated-white-background-46501096" translatesAutoresizingMaskIntoConstraints="NO" id="cAo-0r-xU6">
+                                        <rect key="frame" x="0.0" y="0.0" width="96" height="96"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="96" id="CzF-dE-U6E"/>
+                                            <constraint firstAttribute="width" constant="96" id="YMq-c1-JkH"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="czt-Y7-7B9" userLabel="profileInfoStackView">
+                                        <rect key="frame" x="113" y="3" width="253" height="90"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Алексей Павлов" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODq-pK-VzX">
+                                                <rect key="frame" x="0.0" y="0.0" width="129.66666666666666" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBT-4d-puZ">
+                                                <rect key="frame" x="0.0" y="30" width="132" height="30"/>
+                                                <state key="normal" title="Установить статус">
+                                                    <color key="titleColor" red="0.396078431372549" green="0.56862745098039214" blue="0.77254901960784317" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="g7L-B4-A4t">
+                                                <rect key="frame" x="0.0" y="60" width="63.333333333333336" height="30"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="online" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJ5-Ze-eGN">
+                                                        <rect key="frame" x="0.0" y="0.0" width="45.666666666666664" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iphone" translatesAutoresizingMaskIntoConstraints="NO" id="gir-ew-aGH">
+                                                        <rect key="frame" x="50.666666666666657" y="0.0" width="12.666666666666664" height="30"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tpH-1t-XLo">
+                                <rect key="frame" x="12" y="179" width="366" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Редактировать">
+                                    <color key="baseBackgroundColor" red="0.1725490093" green="0.1764705926" blue="0.1843137443" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="qE5-ja-D9l">
+                                <rect key="frame" x="12" y="218" width="366" height="55.666666666666686"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MwN-tB-zNK">
+                                        <rect key="frame" x="0.0" y="0.0" width="86.333333333333329" height="55.666666666666664"/>
+                                        <color key="tintColor" red="0.39607843139999999" green="0.56862745100000001" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="storyIcon" imagePlacement="top" title="История" imagePadding="4">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbm-uS-FC6">
+                                        <rect key="frame" x="93.333333333333343" y="0.0" width="86.333333333333343" height="55.666666666666664"/>
+                                        <color key="tintColor" red="0.39607843139999999" green="0.56862745100000001" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="noteIcon" imagePlacement="top" title="Запись" imagePadding="4">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c96-sY-Mxx">
+                                        <rect key="frame" x="186.66666666666666" y="0.0" width="85.999999999999972" height="55.666666666666664"/>
+                                        <color key="tintColor" red="0.39607843139999999" green="0.56862745100000001" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="photoIcon" imagePlacement="top" title="Фото" imagePadding="4">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nq-Or-05U">
+                                        <rect key="frame" x="279.66666666666669" y="0.0" width="86.333333333333314" height="55.666666666666664"/>
+                                        <color key="tintColor" red="0.39607843139999999" green="0.56862745100000001" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="clipIcon" imagePlacement="top" title="Клип" imagePadding="4">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bJe-Ym-bch">
+                                <rect key="frame" x="12" y="283.66666666666669" width="366" height="1"/>
+                                <color key="backgroundColor" red="0.20784313725490194" green="0.2117646933" blue="0.21960783" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="v93-QB-ZNL"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="92D-ns-kBk">
+                                <rect key="frame" x="12" y="294.66666666666669" width="366" height="200"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdL-DX-F9d">
+                                        <rect key="frame" x="0.0" y="0.0" width="169.66666666666666" height="36"/>
+                                        <color key="tintColor" red="0.53333336109999996" green="0.52941179279999995" blue="0.53725492949999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="houseIcon" title="Город: Москва" imagePadding="11">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILq-wR-OkK">
+                                        <rect key="frame" x="0.0" y="41" width="177.33333333333334" height="36"/>
+                                        <color key="tintColor" red="0.53333336109999996" green="0.52941179279999995" blue="0.53725492949999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="followersIcon" title="35 подписчиков" imagePadding="16">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IeC-5j-Xih">
+                                        <rect key="frame" x="0.0" y="82" width="227.33333333333334" height="36"/>
+                                        <color key="tintColor" red="0.39607843139999999" green="0.56862745100000001" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="workIcon" title="Указать место работы" imagePadding="12">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HgW-kM-hVw">
+                                        <rect key="frame" x="0.0" y="123" width="196.66666666666666" height="36"/>
+                                        <color key="tintColor" red="0.4196078479" green="0.37647059560000001" blue="0.67450982329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="presentIcon" title="Получить подарок" imagePadding="15">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dDC-0J-EmI">
+                                        <rect key="frame" x="0.0" y="164" width="242.66666666666666" height="36"/>
+                                        <color key="tintColor" red="0.94509804249999996" green="0.92549026010000002" blue="0.93725490570000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="infoIcon" title="Подробная информация" imagePadding="13">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="16"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Kuv-Wp-Rwk" secondAttribute="trailing" constant="12" id="1kN-qM-tKL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tpH-1t-XLo" secondAttribute="trailing" constant="12" id="3jr-DZ-aef"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="92D-ns-kBk" secondAttribute="trailing" constant="12" id="63p-pI-nZk"/>
+                            <constraint firstItem="tpH-1t-XLo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="DJG-Z6-HYw"/>
+                            <constraint firstItem="qE5-ja-D9l" firstAttribute="top" secondItem="tpH-1t-XLo" secondAttribute="bottom" constant="8" id="Ge0-Ha-Fwk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qE5-ja-D9l" secondAttribute="trailing" constant="12" id="H4e-LL-BCd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bJe-Ym-bch" secondAttribute="trailing" constant="12" id="KAo-pG-m4R"/>
+                            <constraint firstItem="qE5-ja-D9l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="KQl-4F-EGX"/>
+                            <constraint firstItem="Kuv-Wp-Rwk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="Lty-V8-HaC"/>
+                            <constraint firstItem="tpH-1t-XLo" firstAttribute="top" secondItem="Kuv-Wp-Rwk" secondAttribute="bottom" constant="33" id="SJS-JG-QHf"/>
+                            <constraint firstItem="92D-ns-kBk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="UPn-Rb-4td"/>
+                            <constraint firstItem="bJe-Ym-bch" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="XoO-xb-3UG"/>
+                            <constraint firstItem="92D-ns-kBk" firstAttribute="top" secondItem="bJe-Ym-bch" secondAttribute="bottom" constant="10" id="l1p-1t-NIh"/>
+                            <constraint firstItem="Kuv-Wp-Rwk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="6" id="lkS-Yz-tk2"/>
+                            <constraint firstItem="bJe-Ym-bch" firstAttribute="top" secondItem="qE5-ja-D9l" secondAttribute="bottom" constant="10" id="ygt-Bg-Mdf"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="clipButton" destination="2nq-Or-05U" id="v3H-Hs-4iX"/>
+                        <outlet property="photoButton" destination="c96-sY-Mxx" id="ODa-6y-vlC"/>
+                        <outlet property="postButton" destination="pbm-uS-FC6" id="jYz-AO-oUL"/>
+                        <outlet property="profileImage" destination="cAo-0r-xU6" id="de6-Xv-qzh"/>
+                        <outlet property="storyButton" destination="MwN-tB-zNK" id="rW0-gz-77A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-443.07692307692304" y="-110.90047393364928"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="clipIcon" width="15" height="16.5"/>
+        <image name="followersIcon" width="14.5" height="15"/>
+        <image name="houseIcon" width="23.5" height="22"/>
+        <image name="infoIcon" width="20" height="20"/>
+        <image name="iphone" width="12.5" height="20.5"/>
+        <image name="noteIcon" width="19.5" height="20.5"/>
+        <image name="photoIcon" width="23" height="18"/>
+        <image name="presentIcon" width="17.5" height="20"/>
+        <image name="pug-dog-isolated-white-background-46501096" width="1300" height="1336"/>
+        <image name="storyIcon" width="24" height="19"/>
+        <image name="workIcon" width="22.5" height="21"/>
+    </resources>
 </document>
